@@ -2,7 +2,7 @@
 
 ---
 Title: Rain Prediction with Classification Models in KNIME - Evaluation Pitfalls and Target Leakage
-Author: "Brunda Varshini Katapalli"
+Author: Brunda Varshini Katapalli
 ---
 
 # Abstract
