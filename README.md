@@ -1,8 +1,7 @@
+## **Author: Brunda Varshini Katapalli**
 # Data-Analytics-Rain-Prediction
 
 # **Title: Rain Prediction with Classification Models in KNIME - Evaluation Pitfalls & Target Leakage**
-
-## **Author: Brunda Varshini Katapalli**
 
 # Abstract
 
