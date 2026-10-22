@@ -1,6 +1,6 @@
 # Data-Analytics-Rain-Prediction
 ---
-Title: Predicting Next-Day Rain with Classification Models in KNIME: Evaluation Pitfalls and Target Leakage
+**Title: Predicting Next-Day Rain with Classification Models in KNIME: Evaluation Pitfalls and Target Leakage**
 
 Author: Brunda Varshini Katapalli
 ---
