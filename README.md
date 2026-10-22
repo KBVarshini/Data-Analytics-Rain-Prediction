@@ -3,6 +3,7 @@
 
 # **Title: Rain Prediction with Classification Models in KNIME - Evaluation Pitfalls & Target Leakage**
 
+
 # Abstract
 
 This study builds binary classifiers in KNIME to predict whether it will rain tomorrow (`RainTomorrow`) from daily weather observations. The training data contained 51,199 rows (51,187 after duplicate removal) with a class imbalance of roughly one "Rain" day to three "No Rain" days. Five model families were built: Decision Tree, k-Nearest Neighbours (k-NN), Random Forest, Support Vector Machine (SVM) and a Neural Network. Data were partitioned 70/30 with stratified sampling, SMOTE was tested for the imbalance, and parameters were tuned with brute-force search, with 10-fold cross-validation used as a comparison. Three models reported 100% hold-out accuracy, and a fourth (Random Forest) reported 79.28%. However, the same k-NN model scored 0.51542 on the Kaggle public leaderboard, which is close to chance level. This gap, together with an ROC curve that sits on the random-classifier diagonal, shows that the 100% figures are not genuine performance. Inspection of the workflow showed that the target itself was passed to the models as input features, a problem known as target leakage. The paper documents the method, reports the results honestly, and sets out how the evaluation should be corrected.
@@ -100,6 +101,8 @@ A corrected study would:
 4. Apply SMOTE to the training partition only.
 5. Report precision, recall, F1 and AUC alongside accuracy, and treat any score near 100% as a prompt to investigate before reporting.
 6. Re-run model selection and resubmit to Kaggle to confirm the validation and external scores agree.
+
+**The workflow is included without data. It has the target leakage described in the paper (the One to Many node keeps copies of RainTomorrow), so it is kept as a record of the original analysis and its results should not be reused. The course dataset is not included.**
 
 # References
 
